@@ -1,0 +1,995 @@
+/* ==========================================
+   EXPENSE TRACKER
+   COMPLETE STYLING
+   ========================================== */
+
+
+/* ==========================================
+   RESET
+   ========================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* ==========================================
+   ROOT VARIABLES
+   ========================================== */
+
+:root {
+
+    --primary: #4f46e5;
+    --primary-dark: #3730a3;
+    --primary-light: #eef2ff;
+
+    --success: #16a34a;
+    --success-light: #dcfce7;
+
+    --warning: #f59e0b;
+    --warning-light: #fef3c7;
+
+    --dark: #111827;
+    --text: #374151;
+    --muted: #6b7280;
+
+    --background: #f5f7fb;
+    --white: #ffffff;
+
+    --border: #e5e7eb;
+
+    --shadow:
+        0 10px 30px rgba(0, 0, 0, 0.07);
+
+    --radius: 16px;
+}
+
+
+/* ==========================================
+   BODY
+   ========================================== */
+
+body {
+
+    font-family: "Inter", Arial, Helvetica, sans-serif;
+
+    background:
+        linear-gradient(
+            135deg,
+            #f5f7fb 0%,
+            #eef2ff 100%
+        );
+
+    color: var(--text);
+
+    min-height: 100vh;
+
+    line-height: 1.6;
+}
+
+
+/* ==========================================
+   HEADER
+   ========================================== */
+
+.header {
+
+    background-color: var(--white);
+
+    border-bottom:
+        1px solid var(--border);
+
+    position: sticky;
+
+    top: 0;
+
+    z-index: 100;
+}
+
+
+.header-container {
+
+    width: 90%;
+
+    max-width: 1200px;
+
+    margin: auto;
+
+    min-height: 70px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+}
+
+
+.logo {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    font-size: 20px;
+
+    font-weight: 800;
+
+    color: var(--dark);
+}
+
+
+.logo-icon {
+
+    width: 38px;
+
+    height: 38px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    background-color:
+        var(--primary-light);
+
+    border-radius: 10px;
+
+    font-size: 20px;
+}
+
+
+.assignment-label {
+
+    font-size: 13px;
+
+    font-weight: 600;
+
+    color: var(--muted);
+
+    background-color: #f9fafb;
+
+    padding: 7px 12px;
+
+    border-radius: 20px;
+
+    border:
+        1px solid var(--border);
+}
+
+
+/* ==========================================
+   MAIN CONTAINER
+   ========================================== */
+
+.main-container {
+
+    width: 90%;
+
+    max-width: 1200px;
+
+    margin: auto;
+
+    padding:
+        60px 0;
+}
+
+
+/* ==========================================
+   HERO
+   ========================================== */
+
+.hero {
+
+    background:
+        linear-gradient(
+            135deg,
+            #4f46e5,
+            #6366f1
+        );
+
+    border-radius: 24px;
+
+    padding: 70px 50px;
+
+    color: white;
+
+    margin-bottom: 55px;
+
+    box-shadow:
+        0 20px 40px
+        rgba(79, 70, 229, 0.2);
+
+    position: relative;
+
+    overflow: hidden;
+}
+
+
+.hero::before {
+
+    content: "";
+
+    position: absolute;
+
+    width: 300px;
+
+    height: 300px;
+
+    border-radius: 50%;
+
+    background:
+        rgba(255, 255, 255, 0.08);
+
+    top: -120px;
+
+    right: -80px;
+}
+
+
+.hero::after {
+
+    content: "";
+
+    position: absolute;
+
+    width: 200px;
+
+    height: 200px;
+
+    border-radius: 50%;
+
+    background:
+        rgba(255, 255, 255, 0.05);
+
+    bottom: -100px;
+
+    left: 30%;
+}
+
+
+.hero-content {
+
+    max-width: 700px;
+
+    position: relative;
+
+    z-index: 2;
+}
+
+
+.badge {
+
+    display: inline-block;
+
+    font-size: 12px;
+
+    font-weight: 700;
+
+    letter-spacing: 1px;
+
+    background:
+        rgba(255, 255, 255, 0.15);
+
+    border:
+        1px solid
+        rgba(255, 255, 255, 0.2);
+
+    padding: 7px 12px;
+
+    border-radius: 20px;
+
+    margin-bottom: 18px;
+}
+
+
+.hero h1 {
+
+    font-size: clamp(38px, 6vw, 60px);
+
+    line-height: 1.1;
+
+    margin-bottom: 20px;
+
+    font-weight: 800;
+}
+
+
+.hero p {
+
+    font-size: 18px;
+
+    color:
+        rgba(255, 255, 255, 0.88);
+
+    max-width: 620px;
+}
+
+
+.console-message {
+
+    margin-top: 30px;
+
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+    background:
+        rgba(0, 0, 0, 0.18);
+
+    padding: 13px 17px;
+
+    border-radius: 10px;
+
+    font-size: 14px;
+
+    font-weight: 500;
+}
+
+
+.console-icon {
+
+    font-size: 18px;
+}
+
+
+/* ==========================================
+   SECTIONS
+   ========================================== */
+
+.section {
+
+    margin-bottom: 55px;
+}
+
+
+.section-heading {
+
+    display: flex;
+
+    align-items: flex-end;
+
+    justify-content: space-between;
+
+    margin-bottom: 25px;
+}
+
+
+.section-heading h2 {
+
+    color: var(--dark);
+
+    font-size: 28px;
+
+    line-height: 1.2;
+
+    margin-top: 5px;
+}
+
+
+.section-heading > p {
+
+    color: var(--muted);
+
+    font-size: 14px;
+}
+
+
+.section-label {
+
+    font-size: 12px;
+
+    font-weight: 800;
+
+    letter-spacing: 1px;
+
+    color: var(--primary);
+}
+
+
+/* ==========================================
+   EXPENSE GRID
+   ========================================== */
+
+.expense-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 20px;
+}
+
+
+.expense-card {
+
+    background-color: var(--white);
+
+    border:
+        1px solid var(--border);
+
+    border-radius: var(--radius);
+
+    padding: 24px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 17px;
+
+    box-shadow: var(--shadow);
+
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+
+.expense-card:hover {
+
+    transform:
+        translateY(-4px);
+
+    box-shadow:
+        0 15px 35px
+        rgba(0, 0, 0, 0.1);
+}
+
+
+.expense-icon {
+
+    width: 52px;
+
+    height: 52px;
+
+    border-radius: 13px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    font-size: 23px;
+
+    flex-shrink: 0;
+}
+
+
+.rent-icon {
+    background-color: #ede9fe;
+}
+
+
+.food-icon {
+    background-color: #fef3c7;
+}
+
+
+.transport-icon {
+    background-color: #dbeafe;
+}
+
+
+.internet-icon {
+    background-color: #cffafe;
+}
+
+
+.entertainment-icon {
+    background-color: #fce7f3;
+}
+
+
+.utilities-icon {
+    background-color: #dcfce7;
+}
+
+
+.expense-info {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 2px;
+}
+
+
+.expense-info span {
+
+    color: var(--muted);
+
+    font-size: 14px;
+
+    font-weight: 500;
+}
+
+
+.expense-info strong {
+
+    color: var(--dark);
+
+    font-size: 22px;
+
+    font-weight: 800;
+}
+
+
+/* ==========================================
+   FEATURES
+   ========================================== */
+
+.features-section {
+
+    margin-bottom: 55px;
+}
+
+
+.feature-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 20px;
+}
+
+
+.feature-card {
+
+    background-color: var(--white);
+
+    border:
+        1px solid var(--border);
+
+    border-radius: var(--radius);
+
+    padding: 30px;
+
+    box-shadow: var(--shadow);
+}
+
+
+.feature-number {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    width: 45px;
+
+    height: 45px;
+
+    border-radius: 12px;
+
+    background-color:
+        var(--primary-light);
+
+    color: var(--primary);
+
+    font-size: 14px;
+
+    font-weight: 800;
+
+    margin-bottom: 20px;
+}
+
+
+.feature-card h3 {
+
+    color: var(--dark);
+
+    font-size: 18px;
+
+    margin-bottom: 10px;
+}
+
+
+.feature-card p {
+
+    color: var(--muted);
+
+    font-size: 14px;
+
+    line-height: 1.7;
+}
+
+
+/* ==========================================
+   BUDGET SECTION
+   ========================================== */
+
+.budget-section {
+
+    margin-bottom: 55px;
+}
+
+
+.budget-card {
+
+    background-color: var(--white);
+
+    border:
+        1px solid var(--border);
+
+    border-radius: 20px;
+
+    padding: 32px;
+
+    box-shadow: var(--shadow);
+}
+
+
+.budget-header {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    margin-bottom: 35px;
+}
+
+
+.budget-header h2 {
+
+    color: var(--dark);
+
+    font-size: 28px;
+
+    margin-top: 5px;
+}
+
+
+.status-badge {
+
+    background-color:
+        var(--success-light);
+
+    color:
+        var(--success);
+
+    border:
+        1px solid
+        #bbf7d0;
+
+    padding: 8px 14px;
+
+    border-radius: 20px;
+
+    font-size: 13px;
+
+    font-weight: 700;
+}
+
+
+.budget-values {
+
+    display: grid;
+
+    grid-template-columns:
+        1fr auto 1fr auto 1fr;
+
+    align-items: center;
+
+    gap: 25px;
+}
+
+
+.budget-item {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 5px;
+}
+
+
+.budget-item span {
+
+    color: var(--muted);
+
+    font-size: 13px;
+
+    font-weight: 500;
+}
+
+
+.budget-item strong {
+
+    color: var(--dark);
+
+    font-size: 30px;
+
+    font-weight: 800;
+}
+
+
+.budget-item.remaining strong {
+
+    color: var(--success);
+}
+
+
+.divider {
+
+    width: 1px;
+
+    height: 55px;
+
+    background-color:
+        var(--border);
+}
+
+
+/* ==========================================
+   TERMINAL / INSTRUCTIONS
+   ========================================== */
+
+.instructions {
+
+    margin-bottom: 20px;
+}
+
+
+.terminal {
+
+    background-color: #111827;
+
+    border-radius: 16px;
+
+    overflow: hidden;
+
+    box-shadow:
+        0 15px 35px
+        rgba(0, 0, 0, 0.15);
+}
+
+
+.terminal-header {
+
+    height: 48px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 15px;
+
+    padding: 0 20px;
+
+    background-color: #1f2937;
+
+    color: #9ca3af;
+
+    font-size: 13px;
+
+    font-weight: 600;
+}
+
+
+.terminal-dots {
+
+    display: flex;
+
+    gap: 6px;
+}
+
+
+.terminal-dots span {
+
+    width: 10px;
+
+    height: 10px;
+
+    border-radius: 50%;
+
+    background-color: #6b7280;
+}
+
+
+.terminal-body {
+
+    padding: 25px;
+
+    font-family:
+        "Courier New",
+        monospace;
+
+    font-size: 14px;
+
+    line-height: 2;
+}
+
+
+.terminal-body p {
+
+    color: #d1d5db;
+}
+
+
+.terminal-symbol {
+
+    color: #818cf8;
+
+    margin-right: 10px;
+
+    font-weight: bold;
+}
+
+
+/* ==========================================
+   FOOTER
+   ========================================== */
+
+.footer {
+
+    width: 90%;
+
+    max-width: 1200px;
+
+    margin: auto;
+
+    padding:
+        30px 0;
+
+    border-top:
+        1px solid var(--border);
+
+    display: flex;
+
+    justify-content: space-between;
+
+    color: var(--muted);
+
+    font-size: 13px;
+}
+
+
+/* ==========================================
+   RESPONSIVE DESIGN
+   ========================================== */
+
+@media (max-width: 900px) {
+
+    .expense-grid {
+
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+
+
+    .feature-grid {
+
+        grid-template-columns:
+            1fr;
+    }
+
+
+    .budget-values {
+
+        grid-template-columns:
+            1fr;
+
+        gap: 20px;
+    }
+
+
+    .divider {
+
+        width: 100%;
+
+        height: 1px;
+    }
+}
+
+
+@media (max-width: 650px) {
+
+    .header-container {
+
+        width: 92%;
+    }
+
+
+    .assignment-label {
+
+        display: none;
+    }
+
+
+    .main-container {
+
+        width: 92%;
+
+        padding:
+            35px 0;
+    }
+
+
+    .hero {
+
+        padding:
+            45px 25px;
+
+        border-radius: 18px;
+    }
+
+
+    .hero h1 {
+
+        font-size: 40px;
+    }
+
+
+    .hero p {
+
+        font-size: 16px;
+    }
+
+
+    .console-message {
+
+        align-items: flex-start;
+
+        font-size: 13px;
+    }
+
+
+    .section-heading {
+
+        align-items: flex-start;
+
+        flex-direction: column;
+
+        gap: 8px;
+    }
+
+
+    .expense-grid {
+
+        grid-template-columns:
+            1fr;
+    }
+
+
+    .budget-card {
+
+        padding: 25px;
+    }
+
+
+    .budget-header {
+
+        align-items: flex-start;
+
+        flex-direction: column;
+
+        gap: 15px;
+    }
+
+
+    .footer {
+
+        width: 92%;
+
+        flex-direction: column;
+
+        gap: 5px;
+    }
+}
